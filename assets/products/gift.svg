@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Gift box with ribbon"><ellipse cx="120" cy="268" rx="78" ry="9" fill="#00000012"/>
+<rect x="44" y="120" width="152" height="140" rx="6" fill="#b4693f"/>
+<rect x="36" y="96" width="168" height="40" rx="6" fill="#8c4a28"/>
+<rect x="108" y="96" width="24" height="164" fill="#efe6d8"/>
+<path d="M120 96c-18-34-52-34-48-14 4 16 34 14 48 14zM120 96c18-34 52-34 48-14-4 16-34 14-48 14z" fill="none" stroke="#efe6d8" stroke-width="8" stroke-linejoin="round"/>
+<path d="M150 190c10 2 18 10 18 22-12 0-20-8-18-22zM150 190c-2 14-10 22-18 22 0-12 8-20 18-22z" fill="#efe6d8" opacity=".0"/></svg>

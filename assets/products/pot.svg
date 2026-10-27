@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Hand-etched clay pot"><ellipse cx="120" cy="268" rx="78" ry="9" fill="#00000012"/>
+
+<path d="M66 92h108c26 14 40 40 40 70 0 38-30 70-94 70S26 200 26 162c0-30 14-56 40-70z" fill="#b4693f" transform="translate(0 0)"/>
+<rect x="84" y="64" width="72" height="30" rx="8" fill="#8c4a28"/>
+<path d="M46 150h148M42 190h156" stroke="#8c4a28" stroke-width="3"/>
+<path d="M46 150l8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10" fill="none" stroke="#efe6d8" stroke-width="3" stroke-linejoin="round" opacity=".85"/>
+<path d="M44 190l8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10 8-10 8 10" fill="none" stroke="#efe6d8" stroke-width="3" stroke-linejoin="round" opacity=".85"/>
+<path d="M78 118c-8 10-12 22-12 32" stroke="#fff" stroke-opacity=".25" stroke-width="6" stroke-linecap="round" fill="none"/></svg>

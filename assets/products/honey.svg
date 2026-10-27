@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Jar of Rangamati hill honey"><ellipse cx="120" cy="268" rx="78" ry="9" fill="#00000012"/>
+<rect x="62" y="96" width="116" height="168" rx="22" fill="#d49a2a"/>
+<rect x="62" y="96" width="116" height="40" rx="20" fill="#efe6d8" opacity=".55"/>
+<rect x="74" y="66" width="92" height="34" rx="8" fill="#262421"/>
+<rect x="74" y="66" width="92" height="9" rx="4" fill="#3a3733"/>
+<rect x="76" y="168" width="88" height="62" rx="6" fill="#efe6d8"/>
+<path d="M120 182l14 8v16l-14 8-14-8v-16z" fill="none" stroke="#262421" stroke-width="3"/>
+<path d="M120 192l6 3.5v7l-6 3.5-6-3.5v-7z" fill="#a9741a"/>
+<path d="M84 112c0 0 2 40 6 40" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round" fill="none"/></svg>

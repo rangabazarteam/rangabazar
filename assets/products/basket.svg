@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Woven bamboo basket"><ellipse cx="120" cy="268" rx="78" ry="9" fill="#00000012"/>
+<path d="M30 140c0-14 40-26 90-26s90 12 90 26l-26 100c-4 12-30 20-64 20s-60-8-64-20z" fill="#d8b87a"/>
+<ellipse cx="120" cy="140" rx="90" ry="26" fill="#e7cf9d"/>
+<ellipse cx="120" cy="140" rx="74" ry="18" fill="#c9a766"/>
+<g stroke="#a98440" stroke-width="3" stroke-linecap="round" fill="none"><path d="M44 184c46 10 106 10 152 0M54 214c38 8 94 8 132 0M66 240c30 6 78 6 108 0"/>
+<path d="M70 156l14 96M104 166l8 94M138 166l-8 94M172 156l-14 96M50 160l24 84M190 160l-24 84" opacity=".7"/></g></svg>

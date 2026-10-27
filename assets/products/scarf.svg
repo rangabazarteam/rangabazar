@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Handwoven striped scarf"><ellipse cx="120" cy="268" rx="78" ry="9" fill="#00000012"/>
+<path d="M50 60h140l10 190H40z" fill="#f1ead9"/>
+<g><rect x="46" y="90" width="150" height="16" fill="#a3262a"/><rect x="45" y="112" width="152" height="6" fill="#262421"/><rect x="44" y="124" width="154" height="30" fill="#a3262a"/><rect x="43" y="160" width="156" height="6" fill="#262421"/><rect x="42" y="172" width="158" height="10" fill="#a3262a"/><rect x="41" y="206" width="160" height="14" fill="#262421"/><rect x="40" y="226" width="162" height="10" fill="#a3262a"/></g>
+<path d="M50 140h140" stroke="#f1ead9" stroke-width="3" stroke-dasharray="6 6"/>
+<path d="M50 60h140" stroke="#262421" stroke-width="6"/>
+<g stroke="#f1ead9" stroke-width="2" stroke-linecap="round"><path d="M44 250v10M52 250v12M60 250v9M68 250v12M76 250v10M84 250v12M92 250v9M100 250v12M108 250v10M116 250v12M124 250v9M132 250v12M140 250v10M148 250v12M156 250v9M164 250v12M172 250v10M180 250v12M188 250v9M196 250v11"/></g></svg>

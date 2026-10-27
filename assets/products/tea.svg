@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Pouch of hill tea leaves"><ellipse cx="120" cy="268" rx="78" ry="9" fill="#00000012"/>
+<path d="M64 74h112l8 186H56z" fill="#5d7a4a"/>
+<path d="M64 74h112l2 22H62z" fill="#44603a"/>
+<rect x="76" y="136" width="88" height="80" rx="6" fill="#efe6d8"/>
+<path d="M120 150c-18 6-26 22-22 40 18-2 28-18 22-40zM120 150c18 6 26 22 22 40-18-2-28-18-22-40z" fill="#5d7a4a"/>
+<path d="M120 154v52" stroke="#efe6d8" stroke-width="3"/>
+<path d="M88 228h64" stroke="#262421" stroke-width="3" stroke-linecap="round"/>
+<path d="M70 74l10-12h80l10 12" fill="none" stroke="#44603a" stroke-width="5" stroke-linejoin="round"/></svg>
