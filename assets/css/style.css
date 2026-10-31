@@ -110,7 +110,6 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
 .card__bn{font-size:.9rem;color:var(--muted)}
 .card__desc{margin-top:6px;font-size:.93rem;line-height:1.55;color:var(--muted)}
 .card__meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:12px 0 14px}
-.price{font-family:var(--font-display);font-weight:600;font-size:1.12rem;color:var(--ink)}
 .stars{--r:0;position:relative;display:inline-block;font-size:.95rem;letter-spacing:2px;line-height:1;white-space:nowrap}
 .stars::before{content:"★★★★★";background:linear-gradient(90deg,var(--ink) calc(var(--r)/5*100%),#d6d1c6 0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .rate{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
@@ -124,16 +123,17 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
 .showcase__video{width:100%;height:100%;object-fit:cover;display:block}
 
 /* Single featured product (jug) */
-.jug{display:block}
-.jug__pics{display:grid;grid-template-columns:1.56fr 1fr;gap:clamp(12px,2vw,24px);align-items:start}
-.jug__pics img{width:100%;height:auto;border-radius:3px;background:#fff}
-.jug__info{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-top:22px}
-.jug__info h3{font-size:clamp(1.3rem,2.4vw,1.8rem)}
-.jug__buy{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
-.jug .price{font-size:clamp(1.3rem,2.4vw,1.7rem)}
-.jug .price small{display:block;font-family:var(--font-body);font-weight:400;font-size:.85rem;color:var(--muted);line-height:1.3}
-.card.jug .btn{margin-top:0;background:var(--ink);color:#fff}
-.card.jug .btn:hover{background:#2c2b28}
+.product{display:block;margin-bottom:clamp(48px,7vw,80px)}
+.product:last-of-type{margin-bottom:0}
+.product__gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1.5vw,16px)}
+.product__gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:3px;background:#fff}
+.product__pics{display:grid;grid-template-columns:1.56fr 1fr;gap:clamp(12px,2vw,24px);align-items:start}
+.product__pics img{width:100%;height:auto;border-radius:3px;background:#fff}
+.product__info{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-top:22px}
+.product__info h3{font-size:clamp(1.3rem,2.4vw,1.8rem)}
+.product__buy{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.card.product .btn{margin-top:0;background:var(--ink);color:#fff}
+.card.product .btn:hover{background:#2c2b28}
 
 /* Story */
 .split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
@@ -192,26 +192,6 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
 .foot__social .icon{width:20px;height:20px}
 .legal{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
-/* Cart drawer */
-.scrim{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
-.scrim.is-open{opacity:1;visibility:visible}
-.drawer{position:fixed;top:0;right:0;bottom:0;z-index:160;display:flex;flex-direction:column;width:min(420px,100%);background:#fff;visibility:hidden;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.7,.2,1),visibility .3s}
-.drawer.is-open{visibility:visible;transform:none}
-.drawer__head{display:flex;align-items:center;justify-content:space-between;padding:12px 12px 12px 24px;border-bottom:1px solid var(--line)}
-.drawer__head h2{font-size:1.2rem}
-.drawer__body{flex:1;overflow:auto;padding:8px 24px}
-.drawer__empty{padding:48px 0;text-align:center;color:var(--muted)}
-.line{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
-.line img{width:64px;height:80px;object-fit:cover;background:var(--warm);border-radius:3px}
-.line h3{font-size:.98rem}
-.line .price{font-size:.95rem}
-.qty{display:inline-flex;align-items:center;margin-top:6px;border:1px solid var(--line);border-radius:3px}
-.qty button{width:32px;height:32px;border:0;background:none;font-size:1.1rem;line-height:1}
-.qty span{min-width:24px;text-align:center;font-size:.92rem}
-.line .rm{border:0;background:none;color:var(--muted);font-size:.85rem;text-decoration:underline;text-underline-offset:3px}
-.drawer__foot{padding:20px 24px 24px;border-top:1px solid var(--line)}
-.sub{display:flex;justify-content:space-between;font-weight:600;color:var(--ink);margin-bottom:6px}
-.drawer__foot small{display:block;margin-bottom:16px;color:var(--muted);line-height:1.5}
 .toast{position:fixed;left:50%;bottom:24px;z-index:300;transform:translate(-50%,20px);max-width:calc(100% - 32px);padding:12px 20px;background:var(--ink);color:#fff;border-radius:3px;font-size:.95rem;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
@@ -227,6 +207,7 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
 /* Responsive */
 @media (max-width:1020px){
   .grid{grid-template-columns:repeat(3,1fr)}
+  .product__gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
   .cats{grid-template-columns:repeat(2,1fr)}
   .why{grid-template-columns:repeat(2,1fr);row-gap:36px}
   .foot{grid-template-columns:1fr 1fr}
@@ -243,9 +224,10 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
   .hero__bg{object-position:20% 50%}
 }
 @media (max-width:640px){
-  .jug__pics{grid-template-columns:1fr}
-  .card.jug .card__desc{display:block}
-  .jug__buy,.jug__buy .btn{width:100%}
+  .product__gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .product__pics{grid-template-columns:1fr}
+  .card.product .card__desc{display:block}
+  .product__buy,.product__buy .btn{width:100%}
   .grid{grid-template-columns:repeat(2,1fr)}
   .card h3{font-size:1rem}
   .card__desc{display:none}

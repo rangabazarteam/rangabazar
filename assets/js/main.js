@@ -4,7 +4,6 @@
 
   // ---- Settings you may change before launch ----
   var NEWSLETTER_ENDPOINT = ''; // e.g. a Formspree / Getform / Brevo form URL that accepts POST
-  var ORDER_URL = 'https://www.facebook.com/rangabazarofficial';
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -12,8 +11,6 @@
     get: function (k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } },
     set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   };
-  var money = function (n) { return '৳ ' + n.toLocaleString('en-US'); };
-
   // ---- Toast ----
   var toast = $('#toast'), toastTimer;
   function say(msg) {
@@ -98,68 +95,10 @@
     });
   });
 
-  // ---- Cart ----
-  var cart = store.get('rb_cart', {});
-  var drawer = $('#cart'), scrim = $('#scrim'), cartBtn = $('#cart-btn'), lastFocus;
-  var catalog = {};
-  cards.forEach(function (c) {
-    catalog[c.dataset.id] = { id: c.dataset.id, name: c.dataset.name, price: +c.dataset.price, img: $('img', c).getAttribute('src') };
-  });
-  function save() { store.set('rb_cart', cart); }
-  function count() { return Object.keys(cart).reduce(function (n, k) { return n + cart[k]; }, 0); }
-  function render() {
-    var ids = Object.keys(cart).filter(function (id) { return catalog[id] && cart[id] > 0; });
-    var body = $('#cart-items'), total = 0;
-    body.innerHTML = '';
-    if (!ids.length) {
-      body.innerHTML = '<p class="drawer__empty">Your cart is empty.<br>Add something from the hills of Rangamati.</p>';
-    }
-    ids.forEach(function (id) {
-      var p = catalog[id], q = cart[id]; total += p.price * q;
-      var el = document.createElement('div'); el.className = 'line';
-      el.innerHTML = '<img src="' + p.img + '" alt="" width="64" height="80">' +
-        '<div><h3></h3><div class="qty"><button type="button" data-d="-1" aria-label="Decrease quantity">−</button><span aria-live="polite">' + q + '</span><button type="button" data-d="1" aria-label="Increase quantity">+</button></div></div>' +
-        '<div style="text-align:right"><div class="price">' + money(p.price * q) + '</div><button type="button" class="rm" data-rm="1">Remove</button></div>';
-      $('h3', el).textContent = p.name;
-      el.addEventListener('click', function (e) {
-        var b = e.target.closest('button'); if (!b) return;
-        if (b.dataset.rm) delete cart[id];
-        else { cart[id] = Math.max(0, cart[id] + (+b.dataset.d)); if (!cart[id]) delete cart[id]; }
-        save(); render();
-      });
-      body.appendChild(el);
-    });
-    $('#cart-total').textContent = money(total);
-    $('#checkout').hidden = !ids.length;
-    var n = count(), badge = $('#cart-count');
-    badge.textContent = n; badge.hidden = n === 0;
-    cartBtn.setAttribute('aria-label', 'Open cart, ' + n + (n === 1 ? ' item' : ' items'));
-  }
-  function openCart() { lastFocus = document.activeElement; drawer.classList.add('is-open'); scrim.classList.add('is-open'); $('#cart-close').focus(); document.body.style.overflow = 'hidden'; }
-  function closeCart() { drawer.classList.remove('is-open'); scrim.classList.remove('is-open'); document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
-  if (drawer) {
-    cartBtn.addEventListener('click', openCart);
-    $('#cart-close').addEventListener('click', closeCart);
-    scrim.addEventListener('click', closeCart);
-    $('#checkout').href = ORDER_URL;
-    $$('.add').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var id = b.closest('.card').dataset.id;
-        cart[id] = (cart[id] || 0) + 1; save(); render();
-        say('Added to cart: ' + catalog[id].name);
-      });
-    });
-    render();
-  }
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    if (drawer && drawer.classList.contains('is-open')) closeCart();
-    else if (panel && !panel.hidden) { panel.hidden = true; searchBtn.setAttribute('aria-expanded', 'false'); searchBtn.focus(); }
+    if (panel && !panel.hidden) { panel.hidden = true; searchBtn.setAttribute('aria-expanded', 'false'); searchBtn.focus(); }
     else if (nav && nav.classList.contains('is-open')) { setNav(false); menuBtn.focus(); }
-  });
-  // keep focus inside the open cart
-  document.addEventListener('focusin', function (e) {
-    if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target)) $('#cart-close').focus();
   });
 
   // ---- Account ----
