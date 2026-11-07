@@ -82,6 +82,23 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
 .section__head p{margin-top:10px;color:var(--muted)}
 .section__head--row{max-width:none;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
+/* Businesses */
+.businesses__layout{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:clamp(36px,7vw,96px);align-items:start}
+.businesses__intro{max-width:28rem}
+.businesses__intro h2{font-size:clamp(1.7rem,3vw,2.35rem)}
+.businesses__intro p{margin-top:12px;color:var(--muted)}
+.businesses__list{border-top:1px solid var(--text)}
+.businesses__item{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;gap:clamp(18px,3vw,32px);padding:26px 0;border-bottom:1px solid var(--line);transition:padding-left .2s}
+.businesses__item:hover{padding-left:6px}
+.businesses__logo{display:grid;place-items:center;width:112px;aspect-ratio:1.35;background:#fff;color:var(--muted);text-align:center;font-size:.78rem;line-height:1.4}
+.businesses__logo img{width:100%;height:100%;object-fit:contain}
+.businesses__copy{min-width:0}
+.businesses__category{display:flex;flex-wrap:wrap;gap:4px 12px;color:var(--muted);font-size:.88rem;line-height:1.4}
+.businesses__category span::before{content:"/ ";color:var(--line)}
+.businesses__copy h3{margin-top:5px;font-size:1.2rem;line-height:1.35;overflow-wrap:anywhere}
+.businesses__description,.businesses__founder{margin-top:6px;color:var(--muted);font-size:.95rem;line-height:1.55}
+.businesses__founder{color:var(--text)}
+
 /* Categories — a joined ledger grid */
 .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .cats li{display:flex}
@@ -211,6 +228,7 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
   .cats{grid-template-columns:repeat(2,1fr)}
   .why{grid-template-columns:repeat(2,1fr);row-gap:36px}
   .foot{grid-template-columns:1fr 1fr}
+  .businesses__layout{grid-template-columns:1fr;gap:32px}
 }
 @media (max-width:900px){
   .bar{grid-template-columns:1fr auto;height:64px}
@@ -235,6 +253,8 @@ h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-h
   .cat{min-height:164px;padding:18px;gap:24px}
   .cat strong{font-size:1.1rem}
   .why{grid-template-columns:1fr}
+  .businesses__item{grid-template-columns:1fr;gap:14px;padding:22px 0}
+  .businesses__logo{width:96px}
   .news form{flex-direction:column}
   .foot{grid-template-columns:1fr}
   .hero{min-height:620px}
