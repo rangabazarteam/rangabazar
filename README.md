@@ -24,6 +24,6 @@ Static storefront landing page for Rangabazar.com (HTML5, CSS3, vanilla JavaScri
 3. **Orders:** product links open `https://www.facebook.com/rangabazarofficial` so customers can ask about prices and place custom orders. There is no cart or payment processing.
 4. **Newsletter:** set `NEWSLETTER_ENDPOINT` in `assets/js/main.js` to a form service URL (Formspree, Getform, Brevo and similar). Until then the form says signup is not switched on.
 5. **Social links:** the Facebook and Instagram links assume `facebook.com/rangabazarofficial` and `instagram.com/rangabazarofficial`. Check they open the right pages.
-6. **Contact details:** no phone number or email is on the site because none was supplied. Add them in the footer in `index.html`.
+6. **Contact details:** the footer lists founder NKM Nixon Talukdar and phone number +8801851925195. Add an email address there if one is supplied.
 7. **Policies:** the privacy, terms and returns pages are drafts. Review them against your real practices.
 8. **Fonts:** Anek Bangla and Hind Siliguri load from Google Fonts. The page falls back to system Bengali fonts if they cannot load.
